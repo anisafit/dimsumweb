@@ -1,0 +1,81 @@
+/* src/components/Contact.css */
+.contact-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 100px;
+  }
+  
+  .contact-info {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .contact-details h3,
+  .social-media-section h3,
+  .order-online h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details p,
+  .social-media-section p {
+    font-size: 1rem;
+    margin: 5px 0;
+    text-align: justify;
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s;
+  }
+  
+  .social-media img:hover {
+    transform: scale(1.1);
+  }
+  
+  .order-online {
+    margin-top: 20px;
+  }
+  
+  .contact-image {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-right: 120px;
+  }
+  
+  .contact-image img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  

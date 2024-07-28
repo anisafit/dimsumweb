@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import Navigation from './components/Navigation';
+import Home from './components/Home';
+import Products from './components/Products';
+import Contact from './components/Contact';
 import './App.css';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  let content;
+  if (currentPage === 'home') {
+    content = <Home />;
+  } else if (currentPage === 'products') {
+    content = <Products />;
+  } else if (currentPage === 'contact') {
+    content = <Contact />;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {content}
+      <footer>
+        <p>&copy; Copyright 2024 © By Dimsum.io</p>
+      </footer>
     </div>
   );
 }
